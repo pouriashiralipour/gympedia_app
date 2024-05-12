@@ -74,17 +74,31 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+    - family: Poopins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+        - asset: assets/fonts/Poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+    - family: Iran Bakh
+      fonts:
+        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Black.ttf
+        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Bold.ttf
+        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBlack.ttf
+        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBold.ttf
+        - asset : assets/fonts/Yekan Bakh Family/YekanBakh-Regular.ttf
+          
+    - family: Iran Yekan
+      fonts:
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBlack.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBold.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBold.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBlack.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileLight.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileMedium.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileRegular.ttf
+        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileThin.ttf
+         
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

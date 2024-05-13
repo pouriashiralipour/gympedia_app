@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:gympedia/common/color_extentions.dart';
@@ -12,7 +14,19 @@ class OnBoardingView extends StatefulWidget {
 }
 
 class _OnBoardingViewState extends State<OnBoardingView> {
+  int selectedPage = 0;
   PageController controller = PageController();
+  @override
+  void initState() {
+    super.initState();
+
+    controller.addListener(() {
+      selectedPage = controller.page?.round() ?? 0;
+
+      setState(() {});
+    });
+  }
+
   List pageList = [
     {
       "title": "Track Your Goal",
@@ -41,10 +55,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   ];
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: CustomColor.white,
       body: Stack(
+        alignment: Alignment.bottomRight,
         children: <Widget>[
           PageView.builder(
             controller: controller,
@@ -52,7 +66,28 @@ class _OnBoardingViewState extends State<OnBoardingView> {
             itemBuilder: (context, index) {
               return OnBoardingPage(pObj: pageList[index]);
             },
-          )
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+                color: CustomColor.primaryColor1,
+                borderRadius: BorderRadius.circular(35)),
+            child: IconButton(
+                onPressed: () {
+                  if (pageList.length <= selectedPage) {
+                    // Welcome Screnn
+                  } else {
+                    selectedPage = selectedPage + 1;
+                    controller.jumpToPage(selectedPage);
+                  }
+                },
+                icon: Icon(
+                  Icons.navigate_next,
+                  color: CustomColor.white,
+                )),
+          ),
         ],
       ),
     );

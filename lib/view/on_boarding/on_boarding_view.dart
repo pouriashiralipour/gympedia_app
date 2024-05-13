@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gympedia/common/color_extentions.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common_widget/on_boarding_page.dart';
@@ -55,10 +56,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
   ];
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: CustomColor.white,
       body: Stack(
-        alignment: Alignment.bottomRight,
         children: <Widget>[
           PageView.builder(
             controller: controller,
@@ -67,28 +68,76 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               return OnBoardingPage(pObj: pageList[index]);
             },
           ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-                color: CustomColor.primaryColor1,
-                borderRadius: BorderRadius.circular(35)),
-            child: IconButton(
-                onPressed: () {
-                  if (pageList.length <= selectedPage) {
-                    // Welcome Screnn
-                  } else {
-                    selectedPage = selectedPage + 1;
-                    controller.jumpToPage(selectedPage);
-                  }
-                },
-                icon: Icon(
-                  Icons.navigate_next,
-                  color: CustomColor.white,
-                )),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: media.width * 0.5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:
+                    List.generate(pageList.length, (index) => buildDot(index)),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: SizedBox(
+              width: 120,
+              height: 120,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  SizedBox(
+                    width: 70,
+                    height: 70,
+                    child: CircularProgressIndicator(
+                      color: CustomColor.primaryColor1,
+                      value: selectedPage / 4,
+                      strokeWidth: 2,
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 30, vertical: 30),
+                    width: 60,
+                    height: 60,
+                    decoration: BoxDecoration(
+                        color: CustomColor.primaryColor1,
+                        borderRadius: BorderRadius.circular(35)),
+                    child: IconButton(
+                        onPressed: () {
+                          if (selectedPage < pageList.length) {
+                            selectedPage = selectedPage + 1;
+                            controller.jumpToPage(selectedPage);
+                          } else {
+                            print('salam');
+                          }
+                        },
+                        icon: Icon(
+                          Icons.navigate_next,
+                          color: CustomColor.white,
+                        )),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
+      ),
+    );
+  }
+
+  AnimatedContainer buildDot(int index) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      margin: const EdgeInsets.only(right: 5),
+      width: selectedPage == index ? 20 : 6,
+      height: 6,
+      decoration: BoxDecoration(
+        color: selectedPage == index
+            ? CustomColor.primaryColor1
+            : const Color(0xFFD8D8D8),
+        borderRadius: BorderRadius.circular(3),
       ),
     );
   }

@@ -6,4 +6,8 @@ class CustomColor {
 
   static Color get secondryColor1 => const Color(0xffC58BF2);
   static Color get secondryColor2 => const Color(0xffEEA4CE);
+
+  static Color get black => const Color(0xff1D1617);
+  static Color get gray => const Color(0xff786F72);
+  static Color get white => Colors.white;
 }

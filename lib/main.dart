@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'GymPedia',
       theme: ThemeData(
         primaryColor: CustomColor.primaryColor1,
-        fontFamily: 'Iran Bakh ',
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: 'IranBakh ',
         useMaterial3: true,
       ),
       home: const OnBoardingView(),

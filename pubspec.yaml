@@ -35,6 +35,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -79,19 +80,22 @@ flutter:
         - asset: assets/fonts/Poppins/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins/Poppins-Bold.ttf
-    - family: Iran Bakh
+    - family: IranBakh
       fonts:
         - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Black.ttf
         - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Bold.ttf
+          weight : 700
         - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBlack.ttf
         - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBold.ttf
+          weight : 900
         - asset : assets/fonts/Yekan Bakh Family/YekanBakh-Regular.ttf
           
-    - family: Iran Yekan
+    - family: IranYekan
       fonts:
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBlack.ttf
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBold.ttf
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBold.ttf
+          weight : 900
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBlack.ttf
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileLight.ttf
         - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileMedium.ttf

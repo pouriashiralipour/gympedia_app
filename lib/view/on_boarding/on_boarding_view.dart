@@ -1,10 +1,5 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gympedia/common/color_extentions.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common_widget/on_boarding_page.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -113,7 +108,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                                 curve: Curves.bounceInOut);
                             controller.jumpToPage(selectedPage);
                           } else {
-                            print('salam');
+                            // NEXT SCREEN
                           }
                         },
                         icon: Icon(

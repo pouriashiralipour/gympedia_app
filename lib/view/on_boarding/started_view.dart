@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:gympedia/common/color_extentions.dart';
-import 'package:gympedia/common_widget/on_boarding_page.dart';
+
 import 'package:gympedia/common_widget/rounded_button.dart';
 import 'package:gympedia/view/on_boarding/on_boarding_view.dart';
 

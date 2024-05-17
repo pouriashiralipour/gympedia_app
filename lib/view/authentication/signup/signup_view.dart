@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common/color_extentions.dart';
 import 'package:gympedia/common_widget/round_textField.dart';
 import 'package:gympedia/common_widget/rounded_button.dart';
+import 'package:gympedia/view/authentication/complete_profile.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -24,7 +25,7 @@ class _SignUpViewState extends State<SignUpView> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -127,7 +128,15 @@ class _SignUpViewState extends State<SignUpView> {
                 SizedBox(
                   height: media.width * 0.4,
                 ),
-                RoundedButton(title: "Register", onPressed: () {}),
+                RoundedButton(
+                    title: "Register",
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CompleteProfile(),
+                          ));
+                    }),
                 SizedBox(
                   height: media.width * 0.04,
                 ),

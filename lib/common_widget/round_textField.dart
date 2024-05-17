@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common/color_extentions.dart';
@@ -50,6 +48,7 @@ class RoundTextFieldForm extends StatelessWidget {
                 width: 20,
                 height: 20,
                 fit: BoxFit.contain,
+                // ignore: deprecated_member_use
                 color: CustomColor.gray,
               ),
             ),

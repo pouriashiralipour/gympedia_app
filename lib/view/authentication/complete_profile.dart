@@ -14,7 +14,7 @@ class CompleteProfile extends StatefulWidget {
 
 class _CompleteProfileState extends State<CompleteProfile> {
   TextEditingController textData = TextEditingController();
-  String gender = '';
+  String chosenValue1 = "";
   @override
   Widget build(BuildContext context) {
     var media = MediaQuery.of(context).size;
@@ -78,6 +78,8 @@ class _CompleteProfileState extends State<CompleteProfile> {
                               )),
                           Expanded(
                             child: DropdownButton(
+                                value:
+                                    chosenValue1.isEmpty ? null : chosenValue1,
                                 borderRadius: BorderRadius.circular(15),
                                 items: ["Male", "Female"]
                                     .map((name) => DropdownMenuItem(
@@ -97,7 +99,11 @@ class _CompleteProfileState extends State<CompleteProfile> {
                                       fontFamily: 'Poopins'),
                                 ),
                                 isExpanded: true,
-                                onChanged: (value) {}),
+                                onChanged: (value) {
+                                  setState(() {
+                                    chosenValue1 = value!;
+                                  });
+                                }),
                           ),
                           const SizedBox(
                             width: 8,

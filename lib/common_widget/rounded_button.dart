@@ -10,7 +10,7 @@ class RoundedButton extends StatelessWidget {
   const RoundedButton({
     super.key,
     required this.title,
-    this.type = RoundedButtonType.textGradient,
+    this.type = RoundedButtonType.bgGradient,
     required this.onPressed,
   });
 

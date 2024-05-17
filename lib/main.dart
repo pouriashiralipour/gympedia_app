@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gympedia/common/color_extentions.dart';
 
 import 'package:gympedia/view/on_boarding/started_view.dart';
@@ -10,15 +11,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of you r application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'GymPedia',
       theme: ThemeData(
         primaryColor: CustomColor.primaryColor1,
-        fontFamily: 'IranBakh ',
+        fontFamily: 'Poopins ',
         useMaterial3: true,
       ),
       home: const StartViewPage(),

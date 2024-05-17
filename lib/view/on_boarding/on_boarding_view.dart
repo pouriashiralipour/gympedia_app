@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gympedia/common/color_extentions.dart';
 import 'package:gympedia/common_widget/on_boarding_page.dart';
+import 'package:gympedia/view/authentication/signup/signup_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -106,9 +107,12 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             controller.animateToPage(selectedPage,
                                 duration: const Duration(milliseconds: 600),
                                 curve: Curves.bounceInOut);
-                            controller.jumpToPage(selectedPage);
                           } else {
-                            // NEXT SCREEN
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const SignUpView(),
+                                ));
                           }
                         },
                         icon: Icon(

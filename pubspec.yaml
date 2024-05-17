@@ -80,27 +80,28 @@ flutter:
         - asset: assets/fonts/Poppins/Poppins-Medium.ttf
         - asset: assets/fonts/Poppins/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins/Poppins-Bold.ttf
-    - family: IranBakh
-      fonts:
-        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Black.ttf
-        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Bold.ttf
           weight : 700
-        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBlack.ttf
-        - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBold.ttf
-          weight : 900
-        - asset : assets/fonts/Yekan Bakh Family/YekanBakh-Regular.ttf
+    # - family: IranBakh
+    #   fonts:
+    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Black.ttf
+    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Bold.ttf
+    #       weight : 700
+    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBlack.ttf
+    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBold.ttf
+    #       weight : 900
+    #     - asset : assets/fonts/Yekan Bakh Family/YekanBakh-Regular.ttf
           
-    - family: IranYekan
-      fonts:
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBlack.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBold.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBold.ttf
-          weight : 900
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBlack.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileLight.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileMedium.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileRegular.ttf
-        - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileThin.ttf
+    # - family: IranYekan
+    #   fonts:
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBlack.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBold.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBold.ttf
+    #       weight : 900
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBlack.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileLight.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileMedium.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileRegular.ttf
+    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileThin.ttf
          
   #
   # For details regarding fonts from package dependencies,

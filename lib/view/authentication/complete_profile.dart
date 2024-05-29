@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common/color_extentions.dart';
 import 'package:gympedia/common_widget/round_textField.dart';
 import 'package:gympedia/common_widget/rounded_button.dart';
+import 'package:gympedia/view/authentication/signup/login/whats_your_goal_view.dart';
 
 class CompleteProfile extends StatefulWidget {
   const CompleteProfile({super.key});
@@ -186,7 +187,15 @@ class _CompleteProfileState extends State<CompleteProfile> {
                     SizedBox(
                       height: media.width * 0.2,
                     ),
-                    RoundedButton(title: "Next >", onPressed: () {})
+                    RoundedButton(
+                        title: "Next >",
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const WhatsYourGoal(),
+                              ));
+                        })
                   ],
                 ),
               )

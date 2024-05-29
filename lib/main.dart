@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:gympedia/common/color_extentions.dart';
-
+// import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:gympedia/view/on_boarding/started_view.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'GymPedia',
       theme: ThemeData(
         primaryColor: CustomColor.primaryColor1,
-        fontFamily: 'Poopins ',
+        fontFamily: 'Poopins',
         useMaterial3: true,
       ),
       home: const StartViewPage(),

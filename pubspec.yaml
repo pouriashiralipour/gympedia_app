@@ -36,7 +36,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1
-  flutter_localization: ^0.2.0
 
 dev_dependencies:
   flutter_test:
@@ -47,7 +46,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^3.0.0
+  flutter_lints: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -82,28 +81,17 @@ flutter:
         - asset: assets/fonts/Poppins/Poppins-Regular.ttf
         - asset: assets/fonts/Poppins/Poppins-Bold.ttf
           weight : 700
-    # - family: IranBakh
-    #   fonts:
-    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Black.ttf
-    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-Bold.ttf
-    #       weight : 700
-    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBlack.ttf
-    #     - asset: assets/fonts/Yekan Bakh Family/YekanBakh-ExtraBold.ttf
-    #       weight : 900
-    #     - asset : assets/fonts/Yekan Bakh Family/YekanBakh-Regular.ttf
-          
-    # - family: IranYekan
-    #   fonts:
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBlack.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileBold.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBold.ttf
-    #       weight : 900
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileExtraBlack.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileLight.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileMedium.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileRegular.ttf
-    #     - asset: assets/fonts/IRAN Yekan Pro/IRANYekanMobileThin.ttf
-         
+    - family: IranYekan
+      fonts:
+        - asset: assets/fonts/IRANYekanPro/IRANYekanMobileMedium.ttf
+        - asset: assets/fonts/IRANYekanPro/IRANYekanMobileRegular.ttf
+        - asset: assets/fonts/IRANYekanPro/IRANYekanMobileBold.ttf
+          weight : 700
+    - family: IranBakh
+      fonts:
+        - asset: assets/fonts/YekanBakhFamily/YekanBakh-Regular.ttf
+        - asset: assets/fonts/YekanBakhFamily/YekanBakh-Bold.ttf
+          weight : 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

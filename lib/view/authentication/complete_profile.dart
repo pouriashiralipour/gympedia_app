@@ -77,33 +77,36 @@ class _CompleteProfileState extends State<CompleteProfile> {
                                 color: CustomColor.gray,
                               )),
                           Expanded(
-                            child: DropdownButton(
-                                value:
-                                    chosenValue1.isEmpty ? null : chosenValue1,
-                                borderRadius: BorderRadius.circular(15),
-                                items: ["Male", "Female"]
-                                    .map((name) => DropdownMenuItem(
-                                        value: name,
-                                        child: Text(
-                                          name,
-                                          style: TextStyle(
-                                              color: CustomColor.gray,
-                                              fontSize: 14),
-                                        )))
-                                    .toList(),
-                                hint: Text(
-                                  'Choose Gender',
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      color: CustomColor.gray,
-                                      fontFamily: 'Poopins'),
-                                ),
-                                isExpanded: true,
-                                onChanged: (value) {
-                                  setState(() {
-                                    chosenValue1 = value!;
-                                  });
-                                }),
+                            child: DropdownButtonHideUnderline(
+                              child: DropdownButton(
+                                  value: chosenValue1.isEmpty
+                                      ? null
+                                      : chosenValue1,
+                                  borderRadius: BorderRadius.circular(15),
+                                  items: ["Male", "Female"]
+                                      .map((name) => DropdownMenuItem(
+                                          value: name,
+                                          child: Text(
+                                            name,
+                                            style: TextStyle(
+                                                color: CustomColor.gray,
+                                                fontSize: 14),
+                                          )))
+                                      .toList(),
+                                  hint: Text(
+                                    'Choose Gender',
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        color: CustomColor.gray,
+                                        fontFamily: 'Poopins'),
+                                  ),
+                                  isExpanded: true,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      chosenValue1 = value!;
+                                    });
+                                  }),
+                            ),
                           ),
                           const SizedBox(
                             width: 8,
@@ -129,6 +132,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                       children: [
                         const Expanded(
                             child: RoundTextFieldForm(
+                                keyboardType: TextInputType.number,
                                 hintText: "Your Weight",
                                 icon: "assets/img/weight-scale 1.svg")),
                         const SizedBox(
@@ -158,6 +162,7 @@ class _CompleteProfileState extends State<CompleteProfile> {
                         const Expanded(
                             child: RoundTextFieldForm(
                                 hintText: "Your Weight",
+                                keyboardType: TextInputType.number,
                                 icon: "assets/img/Swap.svg")),
                         const SizedBox(
                           width: 8,

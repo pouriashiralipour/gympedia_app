@@ -31,7 +31,6 @@ class OnBoardingPage extends StatelessWidget {
               style: TextStyle(
                   color: CustomColor.black,
                   fontWeight: FontWeight.w700,
-                  fontFamily: 'Poopins',
                   fontSize: 24),
             ),
           ),
@@ -39,8 +38,7 @@ class OnBoardingPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Text(
               pObj['subtitle'].toString(),
-              style: TextStyle(
-                  fontFamily: 'Poopins', fontSize: 14, color: CustomColor.gray),
+              style: TextStyle(fontSize: 14, color: CustomColor.gray),
             ),
           ),
         ],

@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gympedia/common/color_extentions.dart';
 import 'package:gympedia/common_widget/round_textField.dart';
 import 'package:gympedia/common_widget/rounded_button.dart';
 import 'package:gympedia/view/authentication/complete_profile.dart';
 import 'package:gympedia/view/authentication/signup/login/login_view.dart';
-import 'package:gympedia/view/authentication/signup/login/welcome_view.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
@@ -84,6 +81,7 @@ class _SignUpViewState extends State<SignUpView> {
                               width: 20,
                               height: 20,
                               fit: BoxFit.contain,
+                              // ignore: deprecated_member_use
                               color: CustomColor.gray,
                             )
                           : SvgPicture.asset(
@@ -91,6 +89,7 @@ class _SignUpViewState extends State<SignUpView> {
                               width: 20,
                               height: 20,
                               fit: BoxFit.contain,
+                              // ignore: deprecated_member_use
                               color: CustomColor.gray,
                             ),
                     ),
